@@ -13,3 +13,33 @@ const personnes = [
          Plus âgé : { nom: 'Bob', age: 30 }
 
    */
+
+function personnePlusAgee(personnes) {
+  let plusAgee = personnes[0];
+
+  for (let i = 1; i < personnes.length; i++) {
+    if (personnes[i].age > plusAgee.age) {
+      plusAgee = personnes[i];
+    }
+  }
+
+  return plusAgee;
+}
+
+function personnePlusJeune(personnes) {
+  let plusJeune = personnes[0];
+
+  for (let i = 1; i < personnes.length; i++) {
+    if (personnes[i].age < plusJeune.age) {
+      plusJeune = personnes[i];
+    }
+  }
+
+  return plusJeune;
+}
+
+const plusAgee = personnePlusAgee(personnes);
+const plusJeune = personnePlusJeune(personnes);
+
+console.log("La personne la plus âgée est :", plusAgee);
+console.log("La personne la plus jeune est :", plusJeune);
