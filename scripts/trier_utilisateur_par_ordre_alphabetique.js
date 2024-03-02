@@ -1,4 +1,4 @@
-// Calculer la somme des âges
+// Trier les utilisateurs par ordre alphabétique
 // ________________________________
 
 const personnes = [
