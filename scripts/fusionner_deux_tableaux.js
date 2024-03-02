@@ -14,3 +14,20 @@ const tableau2 = [
 /**
  * Ex: [{ id: 1, nom: 'Alice' }, { id: 2, nom: 'Bob' }, { id: 3, nom: 'Charlie' }]
  */
+
+function fusionnerTableaux(tableau1, tableau2) {
+  const fusion = [...tableau1];
+
+  tableau2.forEach((element) => {
+    if (
+      !fusion.some((item) => item.id === element.id && item.nom === element.nom)
+    ) {
+      fusion.push(element);
+    }
+  });
+
+  return fusion;
+}
+
+const resultatFusion = fusionnerTableaux(tableau1, tableau2);
+console.log(resultatFusion);
